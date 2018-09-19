@@ -10,10 +10,15 @@ Vagrant.configure("2") do |config|
   config.vm.define "raddit-app" do |app|
     app.vm.box = "ubuntu/xenial64"
     app.vm.hostname = "raddit-app"
+    app.vm.provision "file", source: "~/iac/raddit-app", destination: "/srv/raddit-app"
+    app.vm.provision "ansible" do |ansible|
+      ansible.playbook = "ansible/configuration.yml"
+    end
   end
 
   # ssh settings
   config.ssh.insert_key = false
   config.vm.provision "file", source: "~/.ssh/vagrant_key.pub", destination: "~/.ssh/authorized_keys"
   config.ssh.private_key_path = ["~/.vagrant.d/insecure_private_key","~/.ssh/vagrant_key"]
+
 end
