@@ -10,14 +10,15 @@
   * 開発->ステージング->本番　で変数を変えるとかいう用途
 * .tfstate
   * 管理対象のリソースをjson形式で記載
-  * `terraform init`すると.tfstateというディレクトリが作成されたうえにterraform.tfstateというファイルが勝手に生成される
+  * `terraform init`すると.terraformというディレクトリが作成される
 
 ### 主たるコマンド実行
-> `init` -> `plan` -> `apply` -> `destroy`
+> `init` -> `plan` -> `apply` -> `destroy`<br>
 > 指定のない場合はコマンド実行したディレクトリにある`.tf`ファイルを勝手に見に行ってくれる
 * `terraform init`
   * 設定ファイルの初期化
   * はじめに必ずする
-* 
+* `terraform plan`
+  * 
 * `terraform apply`
 
