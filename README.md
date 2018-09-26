@@ -13,9 +13,11 @@
   * `terraform init`すると.tfstateというディレクトリが作成されたうえにterraform.tfstateというファイルが勝手に生成される
 
 ### 主たるコマンド実行
+> `init` -> `plan` -> `apply` -> `destroy`
 > 指定のない場合はコマンド実行したディレクトリにある`.tf`ファイルを勝手に見に行ってくれる
 * `terraform init`
   * 設定ファイルの初期化
   * はじめに必ずする
+* 
 * `terraform apply`
 
